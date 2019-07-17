@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
                    DESC
   s.homepage     = giturl
   s.license      = "MIT"
-  s.author       = "Naoufal Kadhom"
+  s.author       = "johnthepink"
   s.platform     = :ios, "7.0"
   s.source       = { :git => giturl + ".git", :tag => version }
   s.source_files  = "lib/ios/**/*.{h,m}"
