@@ -342,6 +342,9 @@ export default class PaymentRequest {
     payerEmail: string,
     paymentToken?: string,
   }) {
+    console.log("########################");
+    console.log(details);
+    console.log("########################");
     // On Android, we don't have `onShippingAddressChange` events, so we
     // set the shipping address when the user accepts.
     //
