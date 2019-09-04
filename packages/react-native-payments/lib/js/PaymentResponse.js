@@ -21,6 +21,7 @@ export default class PaymentResponse {
   _payerPhone: null | string;
   _payerEmail: null | string;
   _completeCalled: boolean;
+  _paymentName: null | string;
 
   constructor(paymentResponse: Object) {
     // Set properties as readOnly

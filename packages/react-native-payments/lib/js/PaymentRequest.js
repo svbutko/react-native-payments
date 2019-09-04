@@ -300,6 +300,7 @@ export default class PaymentRequest {
       paymentData: serializedPaymentData,
       paymentToken,
       transactionIdentifier,
+      paymentName,
     } = details;
 
     const isSimulator = transactionIdentifier === 'Simulated Identifier';
@@ -308,6 +309,7 @@ export default class PaymentRequest {
       paymentData: isSimulator ? null : JSON.parse(serializedPaymentData),
       paymentToken,
       transactionIdentifier,
+      paymentName,
     };
   }
 
@@ -341,6 +343,7 @@ export default class PaymentRequest {
     shippingAddress: Object,
     payerEmail: string,
     paymentToken?: string,
+    paymentName?: string,
   }) {
     // On Android, we don't have `onShippingAddressChange` events, so we
     // set the shipping address when the user accepts.
@@ -477,4 +480,3 @@ export default class PaymentRequest {
     );
   }
 }
-
