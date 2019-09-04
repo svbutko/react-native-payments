@@ -342,11 +342,11 @@ RCT_EXPORT_METHOD(handleDetailsUpdate: (NSDictionary *)details
 {
     NSString *transactionId = payment.token.transactionIdentifier;
     NSString *paymentData = [[NSString alloc] initWithData:payment.token.paymentData encoding:NSUTF8StringEncoding];
-    NSString *paymentMethod = payment.token.paymentMethod.displayName;
+    NSString *paymentName = payment.token.paymentMethod.displayName;
     NSMutableDictionary *paymentResponse = [[NSMutableDictionary alloc]initWithCapacity:3];
     [paymentResponse setObject:transactionId forKey:@"transactionIdentifier"];
     [paymentResponse setObject:paymentData forKey:@"paymentData"];
-    [paymentResponse setObject:paymentMethod forKey:@"paymentMethod"];
+    [paymentResponse setObject:paymentName forKey:@"paymentName"];
     
     if (token) {
         [paymentResponse setObject:token forKey:@"paymentToken"];

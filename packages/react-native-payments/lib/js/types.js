@@ -96,4 +96,5 @@ export type PaymentDetailsIOSRaw = {
   paymentData: string,
   paymentToken?: string,
   transactionIdentifier: string,
+  paymentName: string,
 };
