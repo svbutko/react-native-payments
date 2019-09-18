@@ -71,7 +71,11 @@ CGFloat const DEFAULT_CORNER_RADIUS = 4.0;
   } else if ([buttonType isEqualToString: @"inStore"]) {
     type = PKPaymentButtonTypeInStore;
   } else if ([buttonType isEqualToString: @"donate"]) {
-    type = PKPaymentButtonTypeDonate;
+    if (@available(iOS 10.2, *)) {
+      type = PKPaymentButtonTypeDonate;
+    } else {
+      type = PKPaymentButtonTypePlain;
+    }
   } else {
     type = PKPaymentButtonTypePlain;
   }
